@@ -1,12 +1,11 @@
 def solution(d, budget):
     answer = 0
-    cnt = 0
     d.sort()
+    b = 0
     for i in d:
-        if answer <= budget:
-            if answer + i > budget:
-                pass
-            else:
-                answer += i
-                cnt += 1
-    return cnt
+        if answer + i > budget:
+            pass
+        else:
+            answer += i
+            b += 1
+    return b
