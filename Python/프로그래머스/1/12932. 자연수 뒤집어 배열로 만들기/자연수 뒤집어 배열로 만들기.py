@@ -1,6 +1,5 @@
 def solution(n):
-    answer = [int(x) for x in str(n)]
-    li = []
-    for i in range(len(answer)-1, -1, -1):
-        li.append(answer[i])
-    return li
+    answer = []
+    for i in str(n)[::-1]:
+        answer.append(int(i))
+    return answer
