@@ -1,4 +1,5 @@
 def solution(n):
-    if (n ** 0.5) % 1 == 0:
-        return ( n ** 0.5 + 1) ** 2
-    return -1
+    if int(n**0.5)**2 == n:
+        return (int(n**0.5) + 1) ** 2
+    else:
+        return -1
