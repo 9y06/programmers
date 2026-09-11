@@ -1,10 +1,9 @@
+from itertools import combinations
 def solution(numbers):
     answer = []
-    for i in range(len(numbers)):
-        for j in range(len(numbers)):
-            if i == j:
-                pass
-            elif numbers[i] + numbers[j] not in answer:
-                answer.append(numbers[i] + numbers[j])
+    li = combinations(numbers, 2)
+    for i in li:
+        if sum(i) not in answer:
+            answer.append(sum(i))
     answer.sort()
     return answer
