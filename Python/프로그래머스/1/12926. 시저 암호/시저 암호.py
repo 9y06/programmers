@@ -5,11 +5,11 @@ def solution(s, n):
             answer += i
         else:
             for j in range(n):
-                if ord(i) == ord("z"):
-                    i = "a"
-                elif ord(i) == ord("Z"):
-                    i = "A"
+                if i == 'z':
+                    i = 'a'
+                elif i == 'Z':
+                    i = 'A'
                 else:
-                    i = chr(ord(i) + 1)
-            answer += chr(ord(i))
+                    i = chr(ord(i)+1)
+            answer += i
     return answer
